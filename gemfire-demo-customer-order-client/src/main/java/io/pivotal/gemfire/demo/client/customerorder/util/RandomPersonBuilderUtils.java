@@ -15,7 +15,7 @@ public class RandomPersonBuilderUtils {
         Map persons = new HashMap();
         for (int i = 1; i < numberOfPeople + 1; i++) {
             int id = baselineCount + i;
-            String gender = generateString(50);
+            String gender = "female";
             String name = generateString(27);
             String address = generateString(50);
             int age = generateNum(90, 5);

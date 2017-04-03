@@ -1,0 +1,14 @@
+echo --string=${SYS_CLASSPATH}
+echo --string=${APP_PWD}
+start locator \
+--name=${LOCATOR_NAME} \
+--port=${LOCATOR_PORT} \
+--dir=${WORKING_DIR} \
+--load-cluster-configuration-from-dir=false \
+--enable-cluster-configuration=false \
+--J=-Dgemfire.jmx-manager-start=true \
+--J=-Dgemfire.jmx-manager=true \
+--J=-Dgemfire.jmx-manager-port=${JMX_PORT} \
+--J=-Dgemfire.jmx-manager-http-port=${JMX_HTTP_PORT} \
+--J=-Dgemfire.locators=localhost[10334] \
+--J=-Dgemfire.dir=gemfire-demo-customer-order-server/target/test-working-dir/locator_pulse
