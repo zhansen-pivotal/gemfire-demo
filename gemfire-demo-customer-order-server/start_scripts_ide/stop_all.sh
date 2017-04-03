@@ -14,6 +14,13 @@ echo $SCRIPTPATH
 # Run setenv to set the GemFire environment variables
 
 # start GemFire instances
-(gfsh \
+status=`(gfsh \
 -e "connect" \
--e "shutdown --include-locators=true")
+-e "shutdown --include-locators=true")`
+
+echo ""
+echo "******************"
+echo "Shutdown Complete"
+echo "******************"
+
+
