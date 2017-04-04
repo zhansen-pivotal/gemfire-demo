@@ -33,3 +33,5 @@ echo "* Port              : $port"
 echo "* DataBrowser       : $databrowser"
 echo "* Log location      : $workingdir"
 
+tail -f $workingdir/$name.log
+

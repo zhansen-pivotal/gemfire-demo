@@ -86,6 +86,8 @@ public class GemFireCustomerOrderServerConfig {
         functionService
                 .setFunctions(Arrays.asList(new Function[]{customerOrderPriceFunction, customerOrderListFunction}));
         return functionService;
+
+
     }
 
     @Bean
