@@ -22,7 +22,6 @@ public class RandomPersonLoaderController {
     @RequestMapping(value = "/loadRandomPeople", method = RequestMethod.POST)
     public void loadRandomPersons(@RequestParam(value = "num") int num) {
         RandomPersonBuilderUtils randomPersonBuilderUtils = new RandomPersonBuilderUtils();
-        //randomPersonBuilderUtils.clearPersonData(personRegion);
         int baselineCount = personRegion.keySetOnServer().size();
         Map personList = randomPersonBuilderUtils.buildPerson(num, baselineCount);
         personRegion.putAll(personList);
