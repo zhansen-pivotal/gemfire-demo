@@ -50,7 +50,7 @@ public class CustomerCacheLoader implements CacheLoader<CustomerKey, Customer> {
 	@Override
 	@Transactional
 	public Customer load(LoaderHelper<CustomerKey, Customer> helper) throws CacheLoaderException {
-		customerOrderDBService.loadDB();
+		customerOrderDBService.loadDB(); //Described in db package. Load from H2DB.
 		CustomerKey customerKey = helper.getKey();
 		CustomerEntity customerEntity = customerRepository.findOne(customerKey.getId());
 		Customer customer = null;

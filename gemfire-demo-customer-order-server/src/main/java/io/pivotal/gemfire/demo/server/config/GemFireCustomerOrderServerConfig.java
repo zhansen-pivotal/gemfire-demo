@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.gemfire.FunctionServiceFactoryBean;
 import org.springframework.data.gemfire.PartitionedRegionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import io.pivotal.gemfire.demo.db.CustomerOrderDBApplication;
 import io.pivotal.gemfire.demo.model.gf.key.CustomerKey;
 import io.pivotal.gemfire.demo.model.gf.key.CustomerOrderKey;
@@ -101,5 +100,7 @@ public class GemFireCustomerOrderServerConfig {
         CustomerOrderListFunction customerOrderListFunction = new CustomerOrderListFunction();
         return customerOrderListFunction;
     }
+
+
 
 }
